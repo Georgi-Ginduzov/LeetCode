@@ -1,0 +1,15 @@
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\bin\Debug\net6.0\ContainsDublicate.exe
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\bin\Debug\net6.0\ContainsDublicate.deps.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\bin\Debug\net6.0\ContainsDublicate.runtimeconfig.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\bin\Debug\net6.0\ContainsDublicate.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\bin\Debug\net6.0\ContainsDublicate.pdb
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\obj\Debug\net6.0\ContainsDublicate.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\obj\Debug\net6.0\ContainsDublicate.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\obj\Debug\net6.0\ContainsDublicate.AssemblyInfo.cs
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\obj\Debug\net6.0\ContainsDublicate.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\obj\Debug\net6.0\ContainsDublicate.sourcelink.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\obj\Debug\net6.0\ContainsDublicate.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\obj\Debug\net6.0\refint\ContainsDublicate.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\obj\Debug\net6.0\ContainsDublicate.pdb
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\obj\Debug\net6.0\ContainsDublicate.genruntimeconfig.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ContainsDublicate\obj\Debug\net6.0\ref\ContainsDublicate.dll

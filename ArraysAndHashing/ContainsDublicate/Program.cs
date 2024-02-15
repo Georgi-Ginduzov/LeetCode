@@ -4,29 +4,26 @@
     {
         static bool ContainsDublicate(int[] nums)
         {
-            Dictionary<int, int> uniqueNumbers = new Dictionary<int, int>();
-            int i = 0;
-            
-            foreach (int num in nums)
+            HashSet<int> uniqueNumbers = new HashSet<int>(nums.Length);
+
+            for (int i = 0; i < nums.Length; i++)
             {
-                if (!uniqueNumbers.ContainsValue(num))
+                if (uniqueNumbers.Add(nums[i]))
                 {
-                    uniqueNumbers.Add(i, num);
-                    i++;
+
                 }
                 else
                 {
                     return true;
                 }
+                
             }
 
-             return false;
-           
+            return false;
         }
         static void Main(string[] args)
         {
             int[] inputArray = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-
             Console.WriteLine(ContainsDublicate(inputArray));
         }
     }

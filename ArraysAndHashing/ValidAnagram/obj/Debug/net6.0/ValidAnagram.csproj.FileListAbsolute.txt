@@ -1,0 +1,15 @@
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\bin\Debug\net6.0\ValidAnagram.exe
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\bin\Debug\net6.0\ValidAnagram.deps.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\bin\Debug\net6.0\ValidAnagram.runtimeconfig.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\bin\Debug\net6.0\ValidAnagram.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\bin\Debug\net6.0\ValidAnagram.pdb
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\obj\Debug\net6.0\ValidAnagram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\obj\Debug\net6.0\ValidAnagram.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\obj\Debug\net6.0\ValidAnagram.AssemblyInfo.cs
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\obj\Debug\net6.0\ValidAnagram.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\obj\Debug\net6.0\ValidAnagram.sourcelink.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\obj\Debug\net6.0\ValidAnagram.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\obj\Debug\net6.0\refint\ValidAnagram.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\obj\Debug\net6.0\ValidAnagram.pdb
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\obj\Debug\net6.0\ValidAnagram.genruntimeconfig.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\ArraysAndHashing\ValidAnagram\obj\Debug\net6.0\ref\ValidAnagram.dll

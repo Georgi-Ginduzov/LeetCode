@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainsDublicate", "ContainsDublicate\ContainsDublicate.csproj", "{349F5B76-1810-4462-A12B-87EE2F4F8332}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainsDublicate", "ContainsDublicate\ContainsDublicate.csproj", "{349F5B76-1810-4462-A12B-87EE2F4F8332}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidAnagram", "ValidAnagram\ValidAnagram.csproj", "{8C5EDF19-F503-4971-93AA-A5D5AA624477}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{349F5B76-1810-4462-A12B-87EE2F4F8332}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{349F5B76-1810-4462-A12B-87EE2F4F8332}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{349F5B76-1810-4462-A12B-87EE2F4F8332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C5EDF19-F503-4971-93AA-A5D5AA624477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C5EDF19-F503-4971-93AA-A5D5AA624477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C5EDF19-F503-4971-93AA-A5D5AA624477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C5EDF19-F503-4971-93AA-A5D5AA624477}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

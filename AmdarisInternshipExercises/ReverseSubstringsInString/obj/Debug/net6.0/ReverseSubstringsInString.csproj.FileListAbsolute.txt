@@ -1,0 +1,15 @@
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\bin\Debug\net6.0\ReverseSubstringsInString.exe
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\bin\Debug\net6.0\ReverseSubstringsInString.deps.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\bin\Debug\net6.0\ReverseSubstringsInString.runtimeconfig.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\bin\Debug\net6.0\ReverseSubstringsInString.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\bin\Debug\net6.0\ReverseSubstringsInString.pdb
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\obj\Debug\net6.0\ReverseSubstringsInString.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\obj\Debug\net6.0\ReverseSubstringsInString.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\obj\Debug\net6.0\ReverseSubstringsInString.AssemblyInfo.cs
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\obj\Debug\net6.0\ReverseSubstringsInString.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\obj\Debug\net6.0\ReverseSubstringsInString.sourcelink.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\obj\Debug\net6.0\ReverseSubstringsInString.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\obj\Debug\net6.0\refint\ReverseSubstringsInString.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\obj\Debug\net6.0\ReverseSubstringsInString.pdb
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\obj\Debug\net6.0\ReverseSubstringsInString.genruntimeconfig.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\ReverseSubstringsInString\obj\Debug\net6.0\ref\ReverseSubstringsInString.dll

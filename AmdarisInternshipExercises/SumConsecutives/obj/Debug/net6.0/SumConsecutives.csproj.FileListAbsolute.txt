@@ -1,0 +1,15 @@
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\bin\Debug\net6.0\SumConsecutives.exe
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\bin\Debug\net6.0\SumConsecutives.deps.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\bin\Debug\net6.0\SumConsecutives.runtimeconfig.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\bin\Debug\net6.0\SumConsecutives.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\bin\Debug\net6.0\SumConsecutives.pdb
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\obj\Debug\net6.0\SumConsecutives.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\obj\Debug\net6.0\SumConsecutives.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\obj\Debug\net6.0\SumConsecutives.AssemblyInfo.cs
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\obj\Debug\net6.0\SumConsecutives.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\obj\Debug\net6.0\SumConsecutives.sourcelink.json
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\obj\Debug\net6.0\SumConsecutives.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\obj\Debug\net6.0\refint\SumConsecutives.dll
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\obj\Debug\net6.0\SumConsecutives.pdb
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\obj\Debug\net6.0\SumConsecutives.genruntimeconfig.cache
+C:\Users\Asus\source\repos\LeetCode-Solutions\AmdarisInternshipExercises\SumConsecutives\obj\Debug\net6.0\ref\SumConsecutives.dll

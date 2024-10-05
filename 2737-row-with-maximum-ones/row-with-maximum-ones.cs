@@ -6,10 +6,7 @@ public class Solution {
             int ones = 0;
             for(int col = 0; col < mat[row].Length; col++)
             {
-                if(mat[row][col] == 1)
-                {
-                    ones++;
-                }
+                ones += mat[row][col]; 
             }
             if(ones > result[1])
             {

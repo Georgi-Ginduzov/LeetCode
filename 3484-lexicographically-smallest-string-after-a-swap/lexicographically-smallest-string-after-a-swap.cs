@@ -6,7 +6,7 @@ public class Solution {
             if(num[i] % 2 == num[i+1] % 2 && num[i] > num[i+1])
             {
                 (num[i],num[i+1]) = (num[i+1],num[i]);
-                break;
+                return new string(num);
             }
         }
         

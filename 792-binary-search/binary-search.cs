@@ -4,7 +4,7 @@ public class Solution {
         int high = nums.Length-1;
         while(low <=high)
         {
-            int mid = low + (high-low)/2;
+            int mid = (high+low)/2;
             if(nums[mid]==target)
                 return mid;
             else if(nums[mid] > target)

@@ -1,13 +1,28 @@
 public class Solution {
     public int[] Intersection(int[] nums1, int[] nums2) {
-        HashSet<int> set1 = new HashSet<int>(nums1);
-        HashSet<int> set2 = new HashSet<int>(nums2);
-        HashSet<int> intersections = new HashSet<int>();
-        foreach(var num in set1)
+        HashSet<int> set = new HashSet<int>();
+        Array.Sort(nums2);
+
+        foreach(var num in nums1)
         {
-            if(set2.Contains(num))
-                intersections.Add(num);
+            if(set.Contains(num))
+                continue;
+            
+            int low = 0; 
+            int high = nums2.Length-1;
+            while(low<high)
+            {
+                int mid = low + (high-low) / 2;
+                if(nums2[mid] >= num)
+                    high = mid;
+                else
+                    low = mid + 1;
+            }
+
+            if(nums2[high] == num)
+                set.Add(num);
         }
-        return intersections.ToArray();
+
+        return set.ToArray();
     }
 }

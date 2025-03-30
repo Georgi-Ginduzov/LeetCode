@@ -1,49 +1,28 @@
 public class Solution {
     public int MaximumCount(int[] nums) {
-        int low = 0;
-        int high = nums.Length-1;
-        int neg = -1;
+        int low = 0; 
+        int high = nums.Length - 1;
         while(low <= high)
         {
-            int mid = low + (high - low) / 2;
-            if(nums[mid] >= 0)
-            {
-                high = mid - 1;
-            }
+            int mid = low + (high-low) / 2;
+            if(nums[mid] < 0)
+                low = mid+1;
             else
-            {
-                neg = mid;
-                low = mid + 1;
-            }
+                high = mid-1; 
         }
-
-        low = neg != -1 ? neg : 0;
-        high = nums.Length-1;
-        int pos = -1;
-        while(low <= high)
+        int neg = high >= 0 ? high + 1 : 0;
+        
+        high = nums.Length - 1;
+        while(low < high)
         {
-            int mid = low + (high - low) / 2;
-            if(nums[mid] <= 0)
-            {
-                low = mid + 1;
-            }
+            int mid = low + (high-low) / 2;
+            if(nums[mid] > 0)
+                high = mid;
             else
-            {
-                pos = mid;
-                high = mid - 1;
-            }
+                low = mid + 1;
         }
+        int pos = nums[high] > 0 ? nums.Length - high : 0;
 
-        if(neg == -1)
-        {
-            if(pos == -1)
-                return 0;
-            return nums.Length - pos;
-        }
-        else if(pos == -1)
-        {
-            return neg + 1;
-        }
-        return neg + 1 > nums.Length - pos ? neg + 1 : nums.Length - pos;
+        return pos > neg ? pos : neg;
     }
 }

@@ -13,17 +13,20 @@
  */
 public class Solution {
     int max = 0;
+
     public int Diameter(TreeNode root)
     {
         if(root is null)
             return -1;
+        
         var left = Diameter(root.left);
         var right = Diameter(root.right);
 
         max = max > (left + right + 2) ? max : (left + right + 2);
+
         if(left > right)
-            return 1 + left;
-        return 1 + right;
+            return left + 1;
+        return right + 1;
     }
 
     public int DiameterOfBinaryTree(TreeNode root) {

@@ -1,7 +1,7 @@
 public class Solution {
     public IList<IList<int>> FindDifference(int[] nums1, int[] nums2) {
-        var set1 = new bool[2001];
-        var set2 = new bool[2001];
+        Span<bool> set1 = stackalloc bool[2001];
+        Span<bool> set2 = stackalloc bool[2001];
 
         foreach(var num in nums1)
             set1[num + 1000] = true;

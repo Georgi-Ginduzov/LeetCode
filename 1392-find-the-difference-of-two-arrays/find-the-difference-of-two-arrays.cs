@@ -1,6 +1,6 @@
 public class Solution {
     public IList<IList<int>> FindDifference(int[] nums1, int[] nums2) {
-        var res = new List<List<int>>(2){
+        var res = new List<IList<int>>(2){
             new List<int>(),
             new List<int>()
         };
@@ -14,6 +14,6 @@ public class Solution {
             if(!set2.Contains(num))
                 res[0].Add(num);
         
-        return res.Cast<IList<int>>().ToList();
+        return res;
     }
 }

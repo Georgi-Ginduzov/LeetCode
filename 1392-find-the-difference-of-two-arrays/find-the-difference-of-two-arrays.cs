@@ -1,19 +1,28 @@
 public class Solution {
     public IList<IList<int>> FindDifference(int[] nums1, int[] nums2) {
+        var set1 = new bool[2001];
+        var set2 = new bool[2001];
+
+        foreach(var num in nums1)
+            set1[num + 1000] = true;
+        foreach(var num in nums2)
+            set2[num + 1000] = true;
+
         var res = new List<IList<int>>(2){
             new List<int>(),
             new List<int>()
         };
 
-        var set1 = new HashSet<int>(nums1);
-        var set2 = new HashSet<int>(nums2);
-        foreach(var num in set2)
-            if(!set1.Contains(num))
-                res[1].Add(num);
-        foreach(var num in set1)
-            if(!set2.Contains(num))
-                res[0].Add(num);
-        
+        for(int i = 0; i < set1.Length; i++)
+        {
+            if(set1[i] == set2[i])
+                continue;
+            
+            if(set1[i])
+                res[0].Add(i - 1000);
+            else if(set2[i])
+                res[1].Add(i - 1000);
+        }
         return res;
     }
 }

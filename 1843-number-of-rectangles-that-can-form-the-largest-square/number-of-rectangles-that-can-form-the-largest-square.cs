@@ -1,18 +1,20 @@
 public class Solution {
     public int CountGoodRectangles(int[][] rectangles) {
-        var map = new SortedDictionary<int, int>();
+        int length = 0;
+        int maxSquare = 0;
+
         foreach(var i in rectangles)
         {
-            var square = GetSquareLength(i[0], i[1]);
-            if(map.ContainsKey(square))
-                map[square]++;
-            else
-                map.Add(square, 1);
+            var square = i[0] > i[1] ? i[1] : i[0];
+            if(square > maxSquare)
+            {
+                length = 1;
+                maxSquare = square;
+            }
+            else if(square == maxSquare)
+                length++;
         }
 
-        return map.Values.Last();
+        return length;
     }
-
-    public int GetSquareLength(int length, int width)
-        => length > width ? width : length;
 }

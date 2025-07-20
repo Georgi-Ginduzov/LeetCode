@@ -9,8 +9,8 @@ public class Solution {
             set2[num + 1000] = true;
 
         var res = new List<IList<int>>(2){
-            new List<int>(),
-            new List<int>()
+            new List<int>(nums1.Length),
+            new List<int>(nums2.Length)
         };
 
         for(int i = 0; i < set1.Length; i++)

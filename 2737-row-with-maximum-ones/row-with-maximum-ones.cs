@@ -1,19 +1,17 @@
 public class Solution {
     public int[] RowAndMaximumOnes(int[][] mat) {
-        int[] result = new int[2];
-        for(int row = 0; row < mat.Length; row++)
+        var res = new int[2];
+
+        for(int i = 0; i < mat.Length; i++)
         {
-            int ones = 0;
-            for(int col = 0; col < mat[row].Length; col++)
-            {
-                ones += mat[row][col]; 
-            }
-            if(ones > result[1])
-            {
-                result[1] = ones;
-                result[0] = row;
-            }
+            int rowSum = mat[i].Sum();
+            if (rowSum <= res[1])
+                continue;
+            
+            res[0] = i;
+            res[1] = rowSum;
         }
-        return result;
+
+        return res;
     }
 }

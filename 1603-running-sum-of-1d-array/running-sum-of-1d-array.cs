@@ -1,6 +1,7 @@
 public class Solution {
     public int[] RunningSum(int[] nums) {
-        return Sum(nums).ToArray();
+        var arr = Sum(nums);
+        return arr.ToArray();
     }
     public static IEnumerable<int> Sum(int[] nums)
     {

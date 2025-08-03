@@ -12,23 +12,19 @@
  * }
  */
 public class Solution {
-    public TreeNode SortedArrayToBST(int[] nums) {
-        return Construct(nums, 0, nums.Length - 1);
-    }
-
-    public TreeNode Construct(int[] nums, int low, int high)
+    public TreeNode MakeBST(int[] nums, int left, int right)
     {
-        TreeNode root = null;
+        if(left > right)
+            return null;
+        
+        var mid = left + (right - left) / 2;
+        var node = new TreeNode(nums[mid]);
+        node.left = MakeBST(nums, left, mid-1);
+        node.right = MakeBST(nums, mid + 1, right);
 
-        if(low <= high)
-        {
-            int mid = low + (high-low) / 2;
-
-            root = new TreeNode(nums[mid]);
-            root.left = Construct(nums, low, mid-1);
-            root.right = Construct(nums, mid+1, high);
-        }
-
-        return root;
+        return node;
+    }
+    public TreeNode SortedArrayToBST(int[] nums) {
+        return MakeBST(nums, 0, nums.Length - 1);
     }
 }

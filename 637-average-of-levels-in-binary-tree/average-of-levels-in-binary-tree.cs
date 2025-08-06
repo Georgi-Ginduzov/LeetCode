@@ -13,27 +13,37 @@
  */
 public class Solution {
     public IList<double> AverageOfLevels(TreeNode root) {
-        Queue<TreeNode> queue = new Queue<TreeNode>();
+        IList<double> levels = new List<double>();
+
+        var queue = new Queue<TreeNode>();
         queue.Enqueue(root);
-        List<double> levels = new List<double>();
 
         while(queue.Count > 0)
         {
+            var levelCount = queue.Count;
             double sum = 0;
-            double denominator = queue.Count;
-            for(int i = 0; i < denominator; i++)
+            for(int i = 0; i < levelCount; i++)
             {
-                var temp = queue.Dequeue();
-                sum += temp.val;
+                var el = queue.Dequeue();
+                sum += el.val;
 
-                if(temp.left != null) 
-                    queue.Enqueue(temp.left);
-                if(temp.right != null)
-                    queue.Enqueue(temp.right);
+                if(el.left is null)
+                    if(el.right is null)
+                        continue;
+                    else
+                        queue.Enqueue(el.right);
+                else if(el.right is null)
+                    queue.Enqueue(el.left);
+                else
+                {
+                    queue.Enqueue(el.left);
+                    queue.Enqueue(el.right);
+                }
             }
 
-            levels.Add(sum/denominator);
+            levels.Add(sum / levelCount);
         }
+
         return levels;
     }
 }

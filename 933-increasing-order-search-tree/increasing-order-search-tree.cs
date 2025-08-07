@@ -12,28 +12,26 @@
  * }
  */
 public class Solution {
-    TreeNode tree = null;
-    public TreeNode Increase(TreeNode root)
+    TreeNode newRoot;
+    TreeNode current;
+
+    public void InOrder(TreeNode root)
     {
         if(root is null)
-            return null;
+            return;
         
-        Increase(root.left);
-        tree.right = new TreeNode(root.val);
-        tree = tree.right;        
-        Increase(root.right);
-
-        return tree;
+        InOrder(root.left);
+        var newNode = new TreeNode(root.val);
+        current.right = newNode;
+        current = current.right;
+        InOrder(root.right);
     }
-    public TreeNode IncreasingBST(TreeNode root) {
-        if(root is null)
-            return null;
-        
-        var current = new TreeNode(-1);
-        tree = current;
-        
-        Increase(root);
 
-        return current.right;
+    public TreeNode IncreasingBST(TreeNode root) {
+        this.newRoot = new TreeNode(0);
+        this.current = this.newRoot;
+        
+        InOrder(root);
+        return newRoot.right;
     }
 }

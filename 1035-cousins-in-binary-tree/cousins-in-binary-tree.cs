@@ -12,33 +12,32 @@
  * }
  */
 public class Solution {
-    public bool IsCousins(TreeNode root, int x, int y) {
-        int xLevel = -1;
-        int yLevel = -1;
-        TreeNode xParent = null;
-        TreeNode yParent = null;
-
-        void Traverse(TreeNode root, int depth, TreeNode parent)
+    TreeNode xParent;
+    int xDepth;
+    TreeNode yParent;
+    int yDepth;
+    
+    public void DFS(TreeNode root, int depth, TreeNode parent, int x, int y)
+    {
+        if(root is null)
+            return;
+        
+        if(root.val == x)
         {
-            if(root is null)
-                return;
-            
-            if(root.val == x)
-            {
-                xLevel = depth;
-                xParent = parent;
-            }
-            else if(root.val == y)
-            {
-                yLevel = depth;
-                yParent = parent;
-            }
-
-            Traverse(root.left, depth + 1, root);
-            Traverse(root.right, depth + 1, root);
+            xParent = parent;
+            xDepth = depth;
+        }
+        else if(root.val == y)
+        {
+            yParent = parent;
+            yDepth = depth;
         }
 
-        Traverse(root, 0, null);
-        return xLevel == yLevel && xParent != yParent;
+        DFS(root.left, depth + 1, root, x, y);
+        DFS(root.right, depth + 1, root, x, y);
+    }
+    public bool IsCousins(TreeNode root, int x, int y) {
+        DFS(root, 0, root, x, y);
+        return xParent.val != yParent.val && xDepth == yDepth;
     }
 }

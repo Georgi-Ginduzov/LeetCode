@@ -13,14 +13,13 @@
  */
 public class Solution {
     int tilt = 0;
-
-    public int Tilt(TreeNode root)
+    public int Find(TreeNode root)
     {
         if(root is null)
             return 0;
         
-        var left = Tilt(root.left);
-        var right = Tilt(root.right);
+        var left = Find(root.left);
+        var right = Find(root.right);
 
         var nodeTilt = left - right;
         tilt += nodeTilt < 0 ? nodeTilt * -1 : nodeTilt;
@@ -28,7 +27,7 @@ public class Solution {
         return left + right + root.val;
     }
     public int FindTilt(TreeNode root) {
-        Tilt(root);
+        Find(root);
         return tilt;
     }
 }

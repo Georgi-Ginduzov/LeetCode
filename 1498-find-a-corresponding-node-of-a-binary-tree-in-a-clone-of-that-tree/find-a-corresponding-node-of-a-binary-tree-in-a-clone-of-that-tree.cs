@@ -1,24 +1,20 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int x) { val = x; }
- * }
- */
-
 public class Solution {
-    TreeNode node;
     public TreeNode GetTargetCopy(TreeNode original, TreeNode cloned, TreeNode target) {
-        if(cloned == null)
-            return null;
+        var tree = new Queue<TreeNode>();
+        tree.Enqueue(cloned);
 
-        if(cloned.val == target.val)
-            node = cloned;
-        GetTargetCopy(original, cloned.left, target);
-        GetTargetCopy(original, cloned.right, target);
+        while(tree.Any())
+        {
+            var node = tree.Dequeue();
+            if(node.val == target.val)
+                return node;
+            
+            if(node.left != null)
+                tree.Enqueue(node.left);
+            if(node.right != null)
+                tree.Enqueue(node.right);
+        }
 
-        return node;
+        return null;
     }
 }

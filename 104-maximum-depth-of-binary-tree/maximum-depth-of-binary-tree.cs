@@ -12,21 +12,27 @@
  * }
  */
 public class Solution {
-    int max = 0;
-    public int counter = 0;
-
     public int MaxDepth(TreeNode root) {
         if(root is null)
-            return max;
-        
-        counter++;
+            return 0;
+        int depth = 0;
+        var q = new Queue<TreeNode>();
+        q.Enqueue(root);
 
-        max = max > counter ? max : counter;
+        while(q.Any())
+        {
+            depth++;
+            int count = q.Count;
+            while(count-- > 0)
+            {
+                var node = q.Dequeue();
+                if(node.left != null)
+                    q.Enqueue(node.left);
+                if(node.right != null)
+                    q.Enqueue(node.right);
+            }
+        }
 
-        MaxDepth(root.left);
-        MaxDepth(root.right);
-        counter--;
-
-        return max;
+        return depth;
     }
 }

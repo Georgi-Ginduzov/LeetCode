@@ -1,32 +1,35 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 public class Solution {
     public bool IsSameTree(TreeNode p, TreeNode q) {
         if(p is null)
-        {
-            if(q is null)
-                return true;
-            return false;
-        }
+            return q is null;
         else if(q is null)
             return false;
-        else if(p.val != q.val)
-            return false;
+        
+        var queue = new Queue<(TreeNode, TreeNode)>();
+        queue.Enqueue((p, q));
+        while(queue.Any())
+        {
+            (var l, var r) = queue.Dequeue();
+            if(l.val != r.val)
+                return false;
+            
+            if(l.left != null)
+                if(r.left != null)
+                    queue.Enqueue((l.left, r.left));
+                else
+                    return false;
+            else if(r.left != null)
+                return false;
 
-        if(IsSameTree(p.left, q.left) && IsSameTree(p.right, q.right))
-            return true;
-        else
-            return false;
+            if(l.right != null)
+                if(r.right != null)
+                    queue.Enqueue((l.right, r.right));
+                else
+                    return false;
+            else if(r.right != null)
+                return false;
+        }
+
+        return true;
     }
 }

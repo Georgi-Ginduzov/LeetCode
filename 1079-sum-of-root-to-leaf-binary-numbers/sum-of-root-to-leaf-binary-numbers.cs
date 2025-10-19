@@ -12,25 +12,24 @@
  * }
  */
 public class Solution {
-    public int sum = 0;
-
-    public void Traverse(TreeNode root, string num)
-    {
-        if(root is null)
-            return;
-
-        num += root.val.ToString();
-        if(root.left == null && root.right == null)
-            sum += Convert.ToInt32(num, 2);
-        else
-        {
-            Traverse(root.left, num);
-            Traverse(root.right, num);
-        }
-    }
-
     public int SumRootToLeaf(TreeNode root) {
-        Traverse(root, "");
+        int sum = 0;
+
+        void Dfs(TreeNode root, string path)
+        {
+            if(root is null)
+                return;
+            
+            path += root.val.ToString();
+            Dfs(root.left, path);
+            Dfs(root.right, path);
+
+            if(root.left is null && root.right is null)
+                sum += Convert.ToInt32(path.ToString(), 2);
+        }
+
+        Dfs(root, "");
+
         return sum;
     }
 }

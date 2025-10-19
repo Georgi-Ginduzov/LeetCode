@@ -12,38 +12,28 @@
  * }
  */
 public class Solution {
+    private Dictionary<int, List<long>> levels = new Dictionary<int, List<long>>();
+    private void Dfs(TreeNode root, int depth)
+    {
+        if(root is null)
+            return;
+        
+        if(levels.ContainsKey(depth))
+            levels[depth].Add(root.val);
+        else
+            levels.Add(depth, new List<long>(){root.val});
+        
+        Dfs(root.left, depth + 1);
+        Dfs(root.right, depth + 1);
+    }
+
     public IList<double> AverageOfLevels(TreeNode root) {
-        IList<double> levels = new List<double>();
+        Dfs(root, 1);
 
-        var queue = new Queue<TreeNode>();
-        queue.Enqueue(root);
-
-        while(queue.Count > 0)
-        {
-            var levelCount = queue.Count;
-            double sum = 0;
-            for(int i = 0; i < levelCount; i++)
-            {
-                var el = queue.Dequeue();
-                sum += el.val;
-
-                if(el.left is null)
-                    if(el.right is null)
-                        continue;
-                    else
-                        queue.Enqueue(el.right);
-                else if(el.right is null)
-                    queue.Enqueue(el.left);
-                else
-                {
-                    queue.Enqueue(el.left);
-                    queue.Enqueue(el.right);
-                }
-            }
-
-            levels.Add(sum / levelCount);
-        }
-
-        return levels;
+        var averages = new List<double>(levels.Count);
+        foreach(var level in levels.Values)
+            averages.Add(level.Sum() / (double)level.Count);
+        
+        return averages;
     }
 }

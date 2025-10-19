@@ -14,24 +14,21 @@
 public class Solution {
     public TreeNode MergeTrees(TreeNode root1, TreeNode root2) {
         if(root1 is null)
-            if(root2 is null)
-                return root1;
-            else
-                return root2;
-        else if(root2 is null)
+            return root2;
+        if(root2 is null)
             return root1;
         
-        var left = MergeTrees(root1.left, root2.left);
-        var right = MergeTrees(root1.right, root2.right);
-
         root1.val += root2.val;
-        if(left is null)
-            if(right is null)
-                return root1;
-            
-        root1.left = left;
-        root1.right = right;
-
+        if(root1.left is null)
+            root1.left = root2.left;
+        else if(root2.left != null)
+            MergeTrees(root1.left, root2.left);
+        
+        if(root1.right is null)
+            root1.right = root2.right;
+        else if(root2.right != null)
+            MergeTrees(root1.right, root2.right);
+        
         return root1;
     }
 }

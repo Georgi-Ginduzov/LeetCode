@@ -12,16 +12,16 @@
  * }
  */
 public class Solution {
-    List<int> ans = new List<int>();
+    private List<int> tree = new List<int>();
 
     public IList<int> PreorderTraversal(TreeNode root) {
-        if(root == null)
-            return ans;
+        if (root is null)
+            return tree;
         
-        ans.Add(root.val);
+        tree.Add(root.val);
         PreorderTraversal(root.left);
         PreorderTraversal(root.right);
 
-        return ans;
+        return tree;
     }
 }

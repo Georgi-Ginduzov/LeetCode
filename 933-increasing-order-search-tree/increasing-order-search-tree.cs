@@ -1,37 +1,22 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 public class Solution {
-    TreeNode newRoot;
-    TreeNode current;
+    private TreeNode newRoot;
+    private TreeNode newTree;
 
-    public void InOrder(TreeNode root)
+    public Solution()
     {
-        if(root is null)
-            return;
-        
-        InOrder(root.left);
-        var newNode = new TreeNode(root.val);
-        current.right = newNode;
-        current = current.right;
-        InOrder(root.right);
+        newRoot = new TreeNode(0);
+        newTree = newRoot;
     }
 
     public TreeNode IncreasingBST(TreeNode root) {
-        this.newRoot = new TreeNode(0);
-        this.current = this.newRoot;
+        if(root is null)
+            return newTree.right;
         
-        InOrder(root);
-        return newRoot.right;
+        IncreasingBST(root.left);
+        newRoot.right = new TreeNode(root.val);
+        newRoot = newRoot.right;
+        IncreasingBST(root.right);
+
+        return newTree.right;
     }
 }

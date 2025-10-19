@@ -2,35 +2,32 @@ public class Solution {
     public bool ValidPath(int n, int[][] edges, int source, int destination) {
         if(source == destination)
             return true;
-        
+
         var graph = new Dictionary<int, HashSet<int>>();
-        for(int i = 0; i < n; i++) // Adds all nodes => self nodes are added as well
+        for(int i = 0; i < n; i++)
             graph.Add(i, new HashSet<int>());
         
-        for(int i = 0; i < edges.Length; i++)
+        foreach(var edge in edges)
         {
-            graph[edges[i][0]].Add(edges[i][1]);
-            graph[edges[i][1]].Add(edges[i][0]);
+            graph[edge[0]].Add(edge[1]);
+            graph[edge[1]].Add(edge[0]);
         }
 
-        var paths = new Queue<int>();
+        var queue = new Queue<int>();
+        queue.Enqueue(source);
         var visited = new HashSet<int>();
-        paths.Enqueue(source);
         visited.Add(source);
 
-        while(paths.Count > 0)
+        while(queue.Count > 0)
         {
-            var node = paths.Dequeue();
+            var node = queue.Dequeue();
 
-            foreach(var connectedNode in graph[node])
+            foreach(var grNode in graph[node])
             {
-                if(connectedNode == destination)
+                if(grNode == destination)
                     return true;
-                if(!visited.Contains(connectedNode))
-                {
-                    paths.Enqueue(connectedNode);
-                    visited.Add(connectedNode);
-                }
+                if(visited.Add(grNode))
+                    queue.Enqueue(grNode);
             }
         }
 

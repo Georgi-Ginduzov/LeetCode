@@ -1,32 +1,19 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 public class Solution {
-    public bool ContainsPathSum(TreeNode root, int target, int current)
+    private bool HasSum(TreeNode root, int targetSum, int currentSum)
     {
         if(root is null)
             return false;
         
-        current += root.val;
-        if(current == target && root.left == null && root.right == null)
+        currentSum += root.val;
+        if(currentSum == targetSum && root.left is null && root.right is null)
             return true;
-        
-        if(ContainsPathSum(root.left, target, current))
+
+        if(HasSum(root.left, targetSum, currentSum))
             return true;
-        return ContainsPathSum(root.right, target, current);
-    }   
+        return HasSum(root.right, targetSum, currentSum);
+    }
 
     public bool HasPathSum(TreeNode root, int targetSum) {
-        return ContainsPathSum(root, targetSum, 0);
+        return HasSum(root, targetSum, 0);
     }
 }
